@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Career Test</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    .question {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .question p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    .chart-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .chart {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>IT Career Test</h1>
+  <div class="question">
+    <p>Представьте, что вы ведете подкаст или блог. Выберите для него наиболее близкую вам тему:</p>
+    <div class="options">
+      <label><input type="checkbox" name="q1" value="management"> Как строить отношения с другими людьми: секреты успешных переговоров</label>
+      <label><input type="checkbox" name="q1" value="marketing">Социальные сети. Особенности написания интересных историй</label>
+      <label><input type="checkbox" name="q1" value="design">Современные графические средства. Обзоры, особенности, реализация</label>
+      <label><input type="checkbox" name="q1" value="data_analysis">Как правильно управлять финансами. Статистические данные</label>
+      <label><input type="checkbox" name="q1" value="programming">Интересные изобретения в науке</label>
+    </div>
+  </div>
+  <div class="question">
+    <p>Вы с друзьями должны приготовить отчет по проекту, которым занимались очень долго. У вас есть не много времени. Какую обязанность вы возьмете на себя?</p>
+    <div class="options">
+      <label><input type="checkbox" name="q2" value="management">Выступить с презентацией проекта</label>
+      <label><input type="checkbox" name="q2" value="marketing">Подготовить описания ключевых идей</label>
+      <label><input type="checkbox" name="q2" value="design">Оформить презентацию</label>
+      <label><input type="checkbox" name="q2" value="data_analysis">Провести расчеты</label>
+      <label><input type="checkbox" name="q2" value="programming">Продумать логику и структуру презентации</label>
+    </div>
+  </div>
+  <div class="question">
+    <p>Вы читаете статью. На какие слова в первую очередь обратите внимание?</p>
+    <div class="options">
+      <label><input type="checkbox" name="q3" value="management">Отношение, поведение, взаимопонимание</label>
+      <label><input type="checkbox" name="q3" value="marketing">Языки, проблема перевода</label>
+      <label><input type="checkbox" name="q3" value="design">Образное мышление. Восприятие цветов</label>
+      <label><input type="checkbox" name="q3" value="data_analysis">Прогнозирование, расчеты</label>
+      <label><input type="checkbox" name="q3" value="programming">Автоматизация процессов</label>
+    </div>
+  </div>
+  <div class="question">
+    <p>Вас принимают на работу в качестве помощника руководителя. Вы не единственный помощник в команде, поэтому можете выбрать направление, в котором вам интереснее было бы работать. Какие функции возьмете на себя?</p>
+    <div class="options">
+      <label><input type="checkbox" name="q4" value="management">Организовывать встречи руководителя. Помогать на приемах</label>
+      <label><input type="checkbox" name="q4" value="marketing">Проверять документы на наличие ошибок</label>
+      <label><input type="checkbox" name="q4" value="design">Отвечать за визуальный стиль всех презентаций руководства</label>
+      <label><input type="checkbox" name="q4" value="data_analysis">Собирать и проверять данные финансовых отчетов</label>
+      <label><input type="checkbox" name="q4" value="programming">Контролировать производственные процессы, проверять их на соответствие технологии</label>
+    </div>
+  </div>
+  <div class="question">
+    <p>Ваша команда хочет сыграть приключенческий квест. Нужно пройти физическое и интеллектуальное испытание, чтобы получить сокровища. Вы с большим удовольствием примете участие в испытании, где нужно...</p>
+    <div class="options">
+      <label><input type="checkbox" name="q5" value="management">Много взаимодействовать с командой. Понимать друг друга, договариваться</label>
+      <label><input type="checkbox" name="q5" value="marketing">Разгадывать трудные словесные загадки</label>
+      <label><input type="checkbox" name="q5" value="design">Воспроизводить рисунки древних символов и вылепить подходящий ключ</label>
+      <label><input type="checkbox" name="q5" value="data_analysis">Решать математические задачи, чтобы найти код к замку</label>
+      <label><input type="checkbox" name="q5" value="programming">Придумать тактику действий</label>
+    </div>
+  </div>
+  <div class="question">
+    <p>Если бы вы выбирали себе новое хобби, на какие занятия в первую очередь обратили бы внимание:</p>
+    <div class="options">
+      <label><input type="checkbox" name="q6" value="management">Театральная студия. Волонтерство. Работа с детьми. Организация праздников</label>
+      <label><input type="checkbox" name="q6" value="marketing">Каллиграфия. Изучение языков. Как вести свой блог</label>
+      <label><input type="checkbox" name="q6" value="design">Танцевальная студия. Анимация. Фотографии</label>
+      <label><input type="checkbox" name="q6" value="data_analysis">Бизнес-школа. Финансовая грамотность</label>
+      <label><input type="checkbox" name="q6" value="programming">Робототехника</label>
+    </div>
+  </div>
+  <div class="question">
+    <p>Ваша команда хочет разработать новый гаджет для умного дома. Что бы вы хотели делать?</p>
+    <div class="options">
+      <label><input type="checkbox" name="q7" value="management">Координировать работу</label>
+      <label><input type="checkbox" name="q7" value="marketing">Изучить целевую аудиторию, для которой готовите продукт</label>
+      <label><input type="checkbox" name="q7" value="design">Продумать, где и как лучше разместить рекламу</label>
+      <label><input type="checkbox" name="q7" value="data_analysis">Собирать информацию о конкурентах</label>
+      <label><input type="checkbox" name="q7" value="programming">Придумать функции и характеристики прибора для их реализации</label>
+    </div>
+  </div>
+
+  <button onclick="calculateResult()">Submit</button>
+  <div id="result"></div>
+  <div class="chart-container">
+    <canvas id="myChart" class="chart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  function calculateResult() {
+    var categories = ["Management", "Marketing", "Design", "Data Analysis", "Programming"];
+    var scores = {
+      "management": 0,
+      "marketing": 0,
+      "design": 0,
+      "data_analysis": 0,
+      "programming": 0
+    };
+
+    var totalQuestions = 7; // Update this with the total number of questions
+
+    // Loop through each question
+    for (var i = 1; i <= totalQuestions; i++) {
+      var question = document.getElementsByName("q" + i);
+      for (var j = 0; j < question.length; j++) {
+        if (question[j].checked) {
+          scores[question[j].value] += 1;
+        }
+      }
+    }
+
+    // Calculate percentages
+    var percentages = [];
+    for (var category in scores) {
+      var percentage = (scores[category] / totalQuestions) * 100;
+      percentages.push(percentage.toFixed(2));
+    }
+
+    // Display results
+    var resultText = "<h2>Results:</h2>";
+    for (var i = 0; i < categories.length; i++) {
+      resultText += "<p>" + categories[i] + ": " + percentages[i] + "%</p>";
+    }
+    document.getElementById("result").innerHTML = resultText;
+
+    // Display results in chart
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: categories,
+        datasets: [{
+          label: "Percentage",
+          data: percentages,
+          backgroundColor: [
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)"
+          ],
+          borderColor: [
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)"
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
